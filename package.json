@@ -1,0 +1,28 @@
+{
+  "name": "ezra-sdet-automation",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript E2E test suite for Ezra booking and privacy flows — Page Object Model",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:booking": "npx playwright test --project=chromium src/tests/booking-scan-selection.spec.ts",
+    "test:payment": "npx playwright test --project=chromium src/tests/booking-schedule-payment.spec.ts",
+    "test:privacy": "npx playwright test --project=chromium src/tests/privacy-idor.spec.ts",
+    "test:auth": "npx playwright test --project=auth",
+    "test:headed": "npx playwright test --headed --grep @smoke",
+    "test:report": "npx playwright show-report",
+    "test:debug": "npx playwright test --debug",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "Viktoriia Milian",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.2",
+    "@typescript-eslint/eslint-plugin": "^8.59.3",
+    "@typescript-eslint/parser": "^8.59.3",
+    "eslint": "^10.3.0",
+    "eslint-plugin-playwright": "^2.10.2",
+    "typescript": "^6.0.3"
+  }
+}
